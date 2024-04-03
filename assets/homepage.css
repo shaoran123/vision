@@ -31,6 +31,7 @@ h1{
     text-align: center;
     font-weight: 400;
     font-size: calc(var(--font-size)*5) ;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 p{
@@ -38,6 +39,7 @@ p{
     text-align: center;
     font-weight: 400;
     font-size: calc(var(--font-size)*1);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 /*BACKGROUND IMAGE*/
@@ -71,7 +73,6 @@ p{
   
   .image-section img.img-front:hover {
     opacity: 0;
-    cursor: pointer;
   }
 
 .image-section img:nth-child(1) { left: 0%; top: 20%; }
@@ -113,6 +114,7 @@ button {
 
 button:hover{
     background-color: rgb(217, 217, 217);
+    cursor: pointer;
 }
 
 /*IPAD*/
