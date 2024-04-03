@@ -64,6 +64,6 @@ button {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background: radial-gradient(ellipse at var(--x) var(--y), rgba(255, 255, 255, 0.127) 100px, transparent 50px, rgba(46, 46, 46, 0.95) 500px);
+    background: radial-gradient(circle at var(--x) var(--y), rgba(255, 255, 255, 0.127) 300px, transparent 50px, rgba(46, 46, 46, 0.95) 700px);
 }
 
