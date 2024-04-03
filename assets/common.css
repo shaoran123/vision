@@ -52,6 +52,10 @@ button {
     color: black;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 .emoji{
     padding-bottom: var(--spacing);
 }
