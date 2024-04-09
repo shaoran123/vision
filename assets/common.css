@@ -23,8 +23,17 @@ hgroup p{
 }
 
 aside{
-    
+    display: flex;
+    flex-direction: row;
+    gap:calc(var(--spacing)*3);
     padding:var(--spacing);
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap:calc(var(--spacing)/2);
 }
 
 main{
@@ -35,10 +44,6 @@ main{
     display: flex;
     flex-direction: row;
     gap: var(--spacing);
-}
-
-li{
-    padding-top: calc(var(--font-size)*.5);
 }
 
 button {
@@ -58,8 +63,29 @@ button:hover{
 
 #emoji{
     padding-bottom: calc(var(--spacing)*1);
+    size: calc(var(--font-size)*2);
+    display:block;
+    border-radius: 50%;
+    background-color: rgb(255, 178, 70);
+    width: calc(var(--spacing)*2);
+    height: calc(var(--spacing)*2);
     cursor: pointer;
-    font-size: calc(var(--spacing)*2);
+    overflow: hidden;
+}
+
+#stop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    row-gap: 5px;
+}
+
+#stop p{
+    font-size: var(--font-size);
+    font-family: "Urbanist", sans-serif;
+    font-weight: 400;
 }
 
 
@@ -71,7 +97,40 @@ button:hover{
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background: radial-gradient(circle at var(--x) var(--y), rgba(255, 255, 255, 0.127) 300px, transparent 50px, rgba(37, 37, 37, 0.95) 700px);
+    background: radial-gradient(circle at var(--x) var(--y), rgba(255, 255, 255, 0.124) 200px, transparent 50px, rgba(0, 0, 0, 0.77) 400px);
     display: none;
+    background-size: 100% 100%;;
 }
+
+#AMDLight{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background-image: url("AMD.svg");
+    background-repeat: no-repeat;
+    display: none;
+    background-size: 100% 100%;
+}
+
+@media(min-width:700px){
+    :root{
+        --font-size:20px;
+        --color:black;
+        --gutter:calc(var(--font-size)) *2;
+        --spacing:30px;
+    }
+
+    #glaucomaLight{
+        background: radial-gradient(circle at var(--x) var(--y), rgba(255, 255, 255, 0.127) 300px, transparent 50px, rgba(0, 0, 0, 0.9) 700px);
+    }
+
+    #emoji{
+        width: calc(var(--spacing)*2);
+        height:calc(var(--spacing)*2);
+    }
+}
+
 

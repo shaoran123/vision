@@ -14,52 +14,7 @@
 	</head>
 	<body>
 		<div id="glaucomaLight"></div>
-		<!-- <script type="text/javascript">
-			var animationActive = true;
-			var pos = document.documentElement;
-
-			function startGlaucomaSimulation() {
-				if (animationActive) {
-					pos.addEventListener('mousemove', handleMouseMove);
-				}
-			}
-
-			function stopAnimation() {
-				if (!animationActive) {
-					pos.removeEventListener('mousemove', handleMouseMove);
-				}
-				animationActive = false;
-			}
-
-			function handleMouseMove(e) {
-				if (!animationActive) {
-					return; // Stop the function if animation is not active
-				}
-			pos.style.setProperty('--x', e.clientX + 'px');
-			pos.style.setProperty('--y', e.clientY + 'px');
-		}
-		</script> -->
-
-		<!-- <script type="text/javascript">
-			var animationActive = true;
-			var pos = document.documentElement;
-
-			function startGlaucomaSimulation() {
-			if (animationActive) {
-			pos.addEventListener('mousemove', e =>{
-				pos.style.setProperty('--x', e.clientX + 'px');
-				pos.style.setProperty('--y', e.clientY + 'px');
-			});
-			}
-			}
-			
-			function stopAnimation() {
-				animationActive = false;
-			}
-		</script> -->
-
-		
-		
+		<div id="AMDLight"></div>
 		<hgroup>
 			<header>
 				<a href="index.html"><h1>SIMULATION</h1></a>
@@ -69,14 +24,12 @@
 		<div id="page">
 			<aside>
 				<section id="stop">
-					<div>
-						<p id="emoji">🥕 </p>
-					</div>
+					<div id="emoji">🥕</div>
 					<p>stop animation</p>
 				</section>
 				<ul>
 					<li>
-						<button>AMD</button>
+						<button id="AMD">AMD</button>
 					</li>
 					<li>
 						<button>Cataracts</button>
@@ -106,5 +59,31 @@
 		</div>
 	</body>
 </html>
+
+<!-- <script type="text/javascript">
+			var animationActive = true;
+			var pos = document.documentElement;
+
+			function startGlaucomaSimulation() {
+				if (animationActive) {
+					pos.addEventListener('mousemove', handleMouseMove);
+				}
+			}
+
+			function stopAnimation() {
+				if (!animationActive) {
+					pos.removeEventListener('mousemove', handleMouseMove);
+				}
+				animationActive = false;
+			}
+
+			function handleMouseMove(e) {
+				if (!animationActive) {
+					return; // Stop the function if animation is not active
+				}
+			pos.style.setProperty('--x', e.clientX + 'px');
+			pos.style.setProperty('--y', e.clientY + 'px');
+		}
+		</script> -->
 	
 			
