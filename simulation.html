@@ -10,52 +10,95 @@
 			@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;1,400&family=Chivo:ital,wght@0,100..900;1,100..900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 			@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 		</style>
+		<filter id="deuteranopiaFilter" color-interpolation-filters="linearRGB">
+			<feColorMatrix type="matrix" in="SourceGraphic" values="
+				0.10889,0.89111,-0.00000,0,0
+				0.10889,0.89111,0.00000,0,0
+				0.00447,-0.00447,1.00000,0,0
+				0,0,0,1,0"
+			/>
+		</filter>
 		<script defer src="simulation.js"></script>
 	</head>
 	<body>
 		<div id="glaucomaLight"></div>
 		<div id="AMDLight"></div>
-		<hgroup>
-			<header>
-				<a href="index.html"><h1>SIMULATION</h1></a>
-				<p>Simulate eye problems</p>
-			</header>
-		</hgroup>
-		<div id="page">
-			<aside>
-				<section id="stop">
-					<div id="emoji">🥕</div>
-					<p>stop animation</p>
-				</section>
-				<ul>
-					<li>
-						<button id="AMD">AMD</button>
-					</li>
-					<li>
-						<button>Cataracts</button>
-					</li>
-					<li>
-						<button>Color blind</button>
-					</li>
-					<li>
-						<!-- <button onclick="startGlaucomaSimulation()">Glaucoma</button> -->
-						<button id="glaucoma">Glaucoma</button>
-					</li>
-					<li>
-						<button>Diabetic Retinopathy</button>
-					</li>
-				</ul>
-			</aside>
-			<main>
-				<section>
-					<h2>Title</h2>
-					<p>xxx</p>
-				</section>
-				<section>
-					<h3>Subtitle</h3>
-					<p>xxx</p>
-				</section>
-			</main>
+		<div id="deuteranopiaLight"></div>
+		<div id="cataractsLight"></div>
+		<div id="diabeticLight"></div>
+		<div class="background-image">
+			<hgroup>
+				<header>
+					<a href="index.html"><h1>SIMULATION</h1></a>
+					<p>Simulate eye problems</p>
+				</header>
+			</hgroup>
+			<div id="page">
+				<aside>
+					<section id="stop">
+						<div id="emoji">🥕</div>
+						<span class="circle"></span>
+						<p>eye relief</p>
+					</section>
+					<ul>
+						<li>
+							<button id="AMD" class="button">AMD</button>
+						</li>
+						<li>
+							<button id="cataracts" class="button">Cataracts</button>
+						</li>
+						<li>
+							<button id="deuteranopia" class="button">Deuteranopia</button>
+						</li>
+						<li>
+							<button id="glaucoma" class="button">Glaucoma</button>
+						</li>
+						<li>
+							<button id="diabetic" class="button">Diabetic Retinopathy</button>
+						</li>
+					</ul>
+				</aside>
+				<main>
+					<section id="AMDArticle">
+						<section class = title>
+							<h2>Age-related macular degeneration (AMD)</h2>
+							<p>By Kierstan Boyd</p>
+							<p>Reviewed By G Atma Vemulakonda, MD</p>
+							<p>Edited By David Turbert</p>
+							<button>Link to article</button>
+						</section>
+						<section class="article">
+							<div>
+								<h3>What is Age-related macular degeneration</h3>
+								<p>Age-related macular degeneration (AMD) is a problem with your retina. It happens when a part of the retina called the macula is damaged.</p>
+								<p>With AMD you lose your central vision. You cannot see fine details, whether you are looking at something close or far. But your peripheral (side) vision will still be normal. For instance, imagine you are looking at a clock with hands. With AMD, you might see the clock's numbers but not the hands. AMD is very common. It is a leading cause of vision loss in people 50 years or older.</p>
+							</div>
+							<div>
+								<h3>What is Age-related macular degeneration</h3>
+								<p>xxxx</p>
+								<p>xxxxx</p>
+							</div>
+						</section>
+						<p>xxx</p>
+					</section>
+					<section id="cataractsArticle">
+						<h2>Cataracts</h2>
+						<p>xxx</p>
+					</section>
+					<section id="deuteranopiaArticle">
+						<h2>Deuteranopia</h2>
+						<p>xxx</p>
+					</section>
+					<section id="glaucomaArticle">
+						<h2>Glaucoma</h2>
+						<p>xxx</p>
+					</section>
+					<section id="DiabeticArticle">
+						<h2>Diabetic Retinopathy</h2>
+						<p>xxx</p>
+					</section>
+				</main>
+			</div>
 		</div>
 	</body>
 </html>
