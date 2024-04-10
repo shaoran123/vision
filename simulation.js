@@ -177,7 +177,11 @@ function closeAllLight() {
 
 function closeAricle() {
 	mainElement.style.opacity=100;
+	glaucoma.style.backgroundColor = 'rgb(239, 239, 239)';
 	AMD.style.backgroundColor = 'rgb(239, 239, 239)';
+	cataracts.style.backgroundColor = 'rgb(239, 239, 239)';
+	deuteranopia.style.backgroundColor = 'rgb(239, 239, 239)';
+	diabetic.style.backgroundColor = 'rgb(239, 239, 239)';
 	glaucomaArticle.style.display ='none';
 	AMDArticle.style.display ='none';
 	cataractsArticle.style.display ='none';
