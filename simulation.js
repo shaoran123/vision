@@ -204,7 +204,7 @@ function shuffleEmoji() {
 document.addEventListener('DOMContentLoaded', shuffleEmoji);
 
 // Shuffle the emoji when button is clicked
-Array.from(Button).forEach((button) => {
+Array.from(button).forEach((button) => {
     button.addEventListener('click', shuffleEmoji);
 });
 
