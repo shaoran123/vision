@@ -3,6 +3,7 @@ console.log("hi");
 //state
 let animationActive = false;
 let activeLight = null;
+let activeArticle = null;
 
 //get elements
 const glaucoma = document.getElementById('glaucoma');
@@ -14,35 +15,52 @@ const cataractsLight = document.getElementById('cataractsLight');
 const deuteranopiaLight = document.getElementById('deuteranopiaLight');
 const diabeticLight = document.getElementById('diabeticLight');
 const emojis = ['🥕', '🕶️', '🥼', '👓', '🚭', '🏞️', '🥬', '🐟'];
-const Button = document.getElementsByClassName('button');
+const button = document.getElementsByClassName('button');
+const AMDArticle = document.getElementById('AMDArticle');
+const cataractsArticle = document.getElementById('cataractsArticle');
+const deuteranopiaArticle = document.getElementById('deuteranopiaArticle');
+const glaucomaArticle = document.getElementById('glaucomaArticle');
+const diabeticArticle = document.getElementById('diabeticArticle');
+const mainElement = document.querySelector('main');
 
 
 //mouse position
 
 // Glaucoma click 
 glaucoma.onclick = () => {
+	mainElement.style.opacity=100;
     if (activeLight != glaucomaLight) {
-		closeAll()
+		closeAllLight()
+		closeAricle();
         glaucomaLight.style.display = 'block';
         activeLight = glaucomaLight;
+		activeArticle = glaucomaArticle;
+		glaucomaArticle.style.display = 'block';
         animationActive = true;
+		glaucoma.style.backgroundColor = '#EDE2FF';
 
 		document.addEventListener('mousemove', e => {
 			glaucomaLight.style.setProperty('--x', e.clientX + 'px');
 			glaucomaLight.style.setProperty('--y', e.clientY + 'px');
 		});
     } else {
-		closeAll();
+		closeAllLight();
+		closeAricle();
     }
 }
 
 // AMD click 
 AMD.onclick = () => {
+	mainElement.style.opacity=100;
     if (activeLight != AMDLight) {
-		closeAll()
+		closeAllLight()
+		closeAricle();
         AMDLight.style.display = 'block';
         activeLight = AMDLight;
         animationActive = true;
+		activeArticle = AMDArticle;
+		AMDArticle.style.display = 'block';
+		AMD.style.backgroundColor = '#EDE2FF';
 
 		document.addEventListener('mousemove', e =>{
 			console.log('Moving AMDLight');
@@ -51,17 +69,23 @@ AMD.onclick = () => {
 		});
 
     } else {
-		closeAll();
+		closeAllLight();
+		closeAricle();
     }
 }
 
 // cataractsLight click 
 cataracts.onclick = () => {
+	mainElement.style.opacity=100;
     if (activeLight != cataractsLight) {
-		closeAll()
+		closeAllLight()
+		closeAricle();
         cataractsLight.style.display = 'block';
         activeLight = cataractsLight;
         animationActive = true;
+		activeArticle = cataractsArticle;
+		cataractsArticle.style.display = 'block';
+		cataracts.style.backgroundColor = '#EDE2FF'
 		// cataracts.style.backgroundColor = "#FFFCB7";
 
 		document.addEventListener('mousemove', e =>{
@@ -70,7 +94,8 @@ cataracts.onclick = () => {
 		});
 
     } else {
-		closeAll();
+		closeAllLight();
+		closeAricle();
 		// cataracts.style.backgroundColor = 'rgb(239, 239, 239)';
     }
 }
@@ -95,27 +120,38 @@ cataracts.onclick = () => {
 // }
 
 document.getElementById('deuteranopia').addEventListener('click', () => {
+	mainElement.style.opacity=100;
     if (activeLight != deuteranopiaLight) {
-        closeAll();
+        closeAllLight();
+		closeAricle();
         deuteranopiaLight.style.display = 'block';
         activeLight = deuteranopiaLight;
         animationActive = true;
+		activeArticle = deuteranopiaArticle;
+		deuteranopiaArticle.style.display = 'block';
+		deuteranopia.style.backgroundColor = '#EDE2FF'
 
         // Assuming rgblind exposes a function to apply colorblind simulation
         // Replace 'document.body' with the specific element you want to apply the simulation on
         rgblind.simulate(document.body, 'deuteranopia');
     } else {
-        closeAll();
+        closeAllLight();
+		closeAricle();
     }
 });
 
 // diabetic click 
 diabetic.onclick = () => {
+	mainElement.style.opacity=100;
     if (activeLight != diabeticLight) {
-		closeAll()
+		closeAllLight();
+		closeAricle();
         diabeticLight.style.display = 'block';
         activeLight = diabeticLight;
         animationActive = true;
+		activeArticle = diabeticArticle;
+		diabeticArticle.style.display = 'block';
+		diabetic.style.backgroundColor = '#EDE2FF'
 
 		document.addEventListener('mousemove', e =>{
 			diabeticLight.style.left = e.clientX-(diabeticLight.clientWidth/2.5) + 'px';
@@ -123,12 +159,13 @@ diabetic.onclick = () => {
 		});
 
     } else {
-		closeAll();
+		closeAllLight();
+		closeAricle();
     }
 }
 
 // Close All 
-function closeAll() {
+function closeAllLight() {
 	AMDLight.style.display = 'none';
 	glaucomaLight.style.display = 'none';
 	cataractsLight.style.display = 'none';
@@ -138,9 +175,19 @@ function closeAll() {
 	animationActive = false;
 }
 
+function closeAricle() {
+	mainElement.style.opacity=100;
+	AMD.style.backgroundColor = 'rgb(239, 239, 239)';
+	glaucomaArticle.style.display ='none';
+	AMDArticle.style.display ='none';
+	cataractsArticle.style.display ='none';
+	deuteranopiaArticle.style.display ='none';
+	diabeticArticle.style.display ='none';
+}
+
 // Stop click 
 stopBtn.onclick = () => {
-    closeAll();
+    closeAllLight();
 }
 
 //emoji shuffle
@@ -156,6 +203,7 @@ document.addEventListener('DOMContentLoaded', shuffleEmoji);
 Array.from(Button).forEach((button) => {
     button.addEventListener('click', shuffleEmoji);
 });
+
 
 // glaucoma.onclick = () => {
 // 	if (animationActive == false) {

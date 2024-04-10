@@ -14,7 +14,7 @@
     width: 100%;
     height:100vh;
     z-index:-1;
-    position: fixed;
+    /* position: fixed; */
 }
 
 
@@ -37,8 +37,9 @@ hgroup p{
 aside{
     display: flex;
     flex-direction: row;
-    gap:calc(var(--spacing)*2);
+    gap:calc(var(--spacing)*1);
     padding:var(--spacing);
+    position: sticky;
     /* background-color: rgb(226, 226, 226); */
 }
 
@@ -52,9 +53,11 @@ ul{
 
 main{
     margin:var(--spacing);
+    margin-top:0px;
     padding:var(--spacing);
     background-color: rgb(239, 239, 239);
     border-radius: 10px;
+    opacity: 0;
 }
 
 #page{
@@ -94,11 +97,12 @@ button:hover{
 .circle{
     display:block;
     border-radius: 50%;
-    background-color: rgb(239, 239, 239);
+    background-color: rgb(254, 255, 208);
     width: calc(var(--spacing)*2);
     height: calc(var(--spacing)*2);
     cursor: pointer;
     position: relative;
+    border: 1px dashed black;
 }
 #emoji{
     position: absolute;
@@ -120,11 +124,11 @@ button:hover{
     font-family: "Urbanist", sans-serif;
     font-weight: 400;
     margin-top: 10px;
-    color: white;
+    color: black;
 }
 
 
-/*JAVASCRIPT*/
+/*JAVASCRIPT Light*/
 #glaucomaLight{
     position: fixed;
     top: 0;
@@ -159,7 +163,7 @@ button:hover{
     height: 100%;
     pointer-events: none;
     background: radial-gradient(circle at var(--x) var(--y), transparent, rgba(222, 222, 222, 0.5) 30%);
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(3px);
     display: none;
 }
 
@@ -189,6 +193,32 @@ button:hover{
     backdrop-filter: blur(2px);
 }
 
+/*JS Article*/
+
+/* main{
+    display:none;
+} */
+
+#glaucomaArticle{
+    display: none;
+}
+
+#AMDArticle{
+    display: none;
+}
+
+#cataractsArticle{
+    display: none;
+}
+
+#deuteranopiaArticle{
+    display: none;
+}
+
+#diabeticArticle{
+    display: none;
+}
+
 
 
 @media(min-width:700px){
@@ -202,11 +232,16 @@ button:hover{
     aside{
         display: flex;
         flex-direction: column;
+        flex:1;
     }
 
     ul{
         display: flex;
         flex-direction: column;
+    }
+
+    main{
+        flex:4;
     }
 
     #page{
@@ -215,23 +250,34 @@ button:hover{
         gap: var(--spacing);
     }
 
-
-/*LIGHT*/
-    #glaucomaLight{
-        background: radial-gradient(circle at var(--x) var(--y), rgba(255, 255, 255, 0.031) 400px, transparent 50px, rgba(2, 2, 2, 0.767) 700px);
+    button:hover{
+        background-color: rgb(217, 217, 217);
+        cursor: pointer;
     }
-
-    #cataractsLight{
-        background: radial-gradient(circle at var(--x) var(--y), transparent, rgba(222, 222, 222, 0.337) 30%);
-    }
-
-    
 
     #emoji{
         width: calc(var(--spacing)*2);
         height:calc(var(--spacing)*2);
-        transform: translate(20%, 20%);
+        transform: translate(25%, 20%);
     }
+
+    #emoji:hover{
+        opacity: 80%;
+    }
+
+
+
+
+/*LIGHT*/
+    #glaucomaLight{
+        background: radial-gradient(circle at var(--x) var(--y), rgba(255, 255, 255, 0.031) 300px, transparent 50px, rgba(2, 2, 2, 0.767) 700px);
+    }
+
+    #cataractsLight{
+        background: radial-gradient(circle at var(--x) var(--y), transparent, rgba(222, 222, 222, 0.7) 30%);
+    }
+
+    
 
     
 }
