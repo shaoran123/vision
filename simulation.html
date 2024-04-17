@@ -10,36 +10,41 @@
 			@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;1,400&family=Chivo:ital,wght@0,100..900;1,100..900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 			@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 		</style>
-		<filter id="deuteranopiaFilter" color-interpolation-filters="linearRGB">
-			<feColorMatrix type="matrix" in="SourceGraphic" values="
-				0.10889,0.89111,-0.00000,0,0
-				0.10889,0.89111,0.00000,0,0
-				0.00447,-0.00447,1.00000,0,0
-				0,0,0,1,0"
-			/>
-		</filter>
 		<script defer src="simulation.js"></script>
 	</head>
 	<body>
 		<div id="glaucomaLight"></div>
 		<div id="AMDLight"></div>
-		<div id="deuteranopiaLight"></div>
+		<div id="achromatopsiaLight"></div>
 		<div id="cataractsLight"></div>
 		<div id="diabeticLight"></div>
-		<div class="background-image">
+		<div class="background-image"></div>
 			<hgroup>
 				<header>
 					<a href="index.html"><h1>SIMULATION</h1></a>
 					<p>Simulate eye problems</p>
 				</header>
+				<section id="prevent">
+					<div id="emoji">🥕</div>
+					<span class="circle"></span>
+					<p>Solutions</p>
+				</section>
+				<!-- <div id="stop">
+					<img src="assets/Mask group.png">
+					<p>Click to stop</p>
+				</div> -->
 			</hgroup>
 			<div id="page">
 				<aside>
-					<section id="stop">
+					<section>
+						<img id="stop" src="assets/Mask group.png">
+						<p>Stop</p>
+					</section> 
+					<!-- <section id="prevent">
 						<div id="emoji">🥕</div>
 						<span class="circle"></span>
-						<p>Prevent</p>
-					</section>
+						<p>Solutions</p>
+					</section> -->
 					<ul>
 						<li>
 							<button id="AMD" class="button">AMD</button>
@@ -48,7 +53,7 @@
 							<button id="cataracts" class="button">Cataracts</button>
 						</li>
 						<li>
-							<button id="deuteranopia" class="button">Deuteranopia</button>
+							<button id="achromatopsia" class="button">Achromatopsia</button>
 						</li>
 						<li>
 							<button id="glaucoma" class="button">Glaucoma</button>
@@ -60,12 +65,20 @@
 				</aside>
 				<main>
 					<section id="AMDArticle">
-						<section class = title>
-							<h2>Age-related macular degeneration (AMD)</h2>
-							<p>By Kierstan Boyd</p>
-							<p>Reviewed By G Atma Vemulakonda, MD</p>
-							<p>Edited By David Turbert</p>
-							<button>Link to article</button>
+						<h2>Age-related macular degeneration (AMD)</h2>
+						<section class = "title">
+							<div class="author">
+								<p>By Kierstan Boyd</p>
+								<p>Reviewed By G Atma Vemulakonda, MD</p>
+								<p>Edited By David Turbert</p>
+							</div>
+							<div class="link">
+								<button id="AMDbtn"><a href="https://www.aao.org/eye-health/diseases/amd-macular-degeneration">Link to article</a></button>
+							</div>
+						</section>
+						<section class="image-container">
+							<img src="assets/fabrizio-conti-rbgXGpA53oM-unsplash.jpg">
+							<img src="assets/fabrizio-conti-rbgXGpA53oM-unsplash.jpg">
 						</section>
 						<section class="article">
 							<div>
@@ -74,32 +87,284 @@
 								<p>With AMD you lose your central vision. You cannot see fine details, whether you are looking at something close or far. But your peripheral (side) vision will still be normal. For instance, imagine you are looking at a clock with hands. With AMD, you might see the clock's numbers but not the hands. AMD is very common. It is a leading cause of vision loss in people 50 years or older.</p>
 							</div>
 							<div>
-								<h3>What is Age-related macular degeneration</h3>
-								<p>xxxx</p>
-								<p>xxxxx</p>
+								<hr>
+								<h3>Two Types of AMD</h3>
+								<h4>Dry AMD</h4>
+								<p>This form is quite common. About 80% (8 out of 10) of people who have AMD have the dry form. Dry AMD is when parts of the macula get thinner with age and tiny clumps of protein called drusen grow. People with dry AMD may have drusen, pigment abnormalities, or geographic atrophy (an area of cell loss in the retina). You slowly lose central vision.</p>
+								<h4>Wet AMD</h4>
+								<p>This form is less common but much more serious. Wet AMD is when new, abnormal blood vessels grow under the retina. These vessels may leak blood or other fluids, causing scarring of the macula. You lose vision faster with wet AMD than with dry AMD.</p>	
+								<p>Many people don't realize they have AMD until their vision is very blurry. This is why it is important to have regular visits to an ophthalmologist. They can look for early signs of AMD before you have any vision problems.</p>
+							</div>
+							<div>
+								<h3>Who Is at Risk for AMD?</h3>
+								<p>You are more likely to develop AMD if you:</p>
+								<ul>
+									<li>eat a diet high in saturated fat (found in foods like meat, butter, and cheese)</li>
+									<li>are overweight</li>
+									<li>smoke cigarettes</li>
+									<li>are over 50 years old</li>
+									<li>have hypertension (high blood pressure)</li>
+									<li>have a family history of AMD</li>
+									<li>Having heart disease is another risk factor for AMD, as is having high cholesterol levels. Caucasians (white people) also have an elevated risk of getting AMD.</li>
+								</ul>
 							</div>
 						</section>
-						<p>xxx</p>
 					</section>
 					<section id="cataractsArticle">
 						<h2>Cataracts</h2>
-						<p>xxx</p>
+						<section class = "title">
+							<div class="author">
+								<p>By Mayo Clinic Staff</p>
+							</div>
+							<div class="link">
+								<button id="cataractsbtn"><a href="https://www.mayoclinic.org/diseases-conditions/cataracts/symptoms-causes/syc-20353790">Link to article</a></button>
+							</div>
+						</section>
+						<section class="image-container">
+							<img src="assets/fabrizio-conti-rbgXGpA53oM-unsplash.jpg">
+							<img src="assets/fabrizio-conti-rbgXGpA53oM-unsplash.jpg">
+						</section>
+						<section class="article">
+							<div>
+								<h3>What is cataracts</h3>
+								<p>A cataract is a clouding of the lens of the eye, which is typically clear. For people who have cataracts, seeing through cloudy lenses is like looking through a frosty or fogged-up window. Clouded vision caused by cataracts can make it more difficult to read, drive a car at night or see the expression on a friend's face.</p>
+								<p>Most cataracts develop slowly and don't disturb eyesight early on. But with time, cataracts will eventually affect vision.</p>
+								<p>At first, stronger lighting and eyeglasses can help deal with cataracts. But if impaired vision affects usual activities, cataract surgery might be needed. Fortunately, cataract surgery is generally a safe, effective procedure.</p>
+							</div>
+							<div>
+								<h3>Causes</h3>
+								<p>Most cataracts develop when aging or injury changes the tissue that makes up the eye's lens. Proteins and fibers in the lens begin to break down. This causes vision to become hazy or cloudy.</p>
+								<p>Some disorders passed down from parents that cause other health problems can increase your risk of cataracts. Cataracts also can be caused by other eye conditions, past eye surgery or medical conditions such as diabetes. Long-term use of steroid medicines also may cause cataracts to develop.</p>
+							</div>
+							<div>
+								<hr>
+								<h3>Types of cataracts</h3>
+								<h4>Cataracts affecting the center of the lens, called nuclear cataracts.</h4>
+								<p>nuclear cataract may at first cause objects far away to be blurry but objects up close to look clear. A nuclear cataract may even improve your reading vision for a short time. But with time, the lens slowly turns more yellow or brown and makes your vision worse. It may become difficult to tell colors apart.</p>
+								<h4>Cataracts that affect the edges of the lens, called cortical cataracts. </h4>
+								<p>cortical cataract begins as white, wedge-shaped spots or streaks on the outer edge of the lens cortex. As the cataract slowly grows, the streaks spread to the center and affect light passing through the lens.</p>	
+								<h4>Cataracts that affect the back of the lens, called posterior subcapsular cataracts.</h4>
+								<p>A posterior subcapsular cataract starts as a small spot that usually forms near the back of the lens, right in the path of light. A posterior subcapsular cataract often affects your reading vision. It also may reduce your vision in bright light and cause glare or halos around lights at night. These types of cataracts tend to grow faster than others.</p>	
+								<h4>Cataracts you're born with, called congenital cataracts. </h4>
+								<p>are born with cataracts or develop them during childhood. These cataracts may be passed down from parents. They also may be associated with an infection or trauma while in the womb.</p>	
+							</div>
+							<div>
+								<h3>Symptoms</h3>
+								<p>Symptoms of cataracts include:</p>
+								<ul>
+									<li>Clouded, blurred or dim vision.</li>
+									<li>Trouble seeing at night.</li>
+									<li>Sensitivity to light and glare.</li>
+									<li>Need for brighter light for reading and other activities.</li>
+									<li>Seeing "halos" around lights.</li>
+									<li>Frequent changes in eyeglass or contact lens prescription.</li>
+									<li>Fading or yellowing of colors.</li>
+									<li>Double vision in one eye.</li>
+								</ul>
+								<p>At first, the cloudiness in your vision caused by a cataract may affect only a small part of the eye's lens. You may not notice any vision loss. As the cataract grows larger, it clouds more of your lens. More clouding changes the light passing through the lens. This may lead to symptoms you notice more.</p>
+							</div>
+						</section>
 					</section>
-					<section id="deuteranopiaArticle">
-						<h2>Deuteranopia</h2>
-						<p>xxx</p>
+					<section id="achromatopsiaArticle">
+						<h2>Achromatopsia</h2>
+						<section class = "title">
+							<div class="author">
+								<p>By Cleveland Clinic</p>
+							</div>
+							<div class="link">
+								<button id="achromatopsiabtn"><a href="https://my.clevelandclinic.org/health/diseases/23909-achromatopsia">Link to article</a> </button>
+							</div>
+						</section>
+						<section class="image-container">
+							<img src="assets/fabrizio-conti-rbgXGpA53oM-unsplash.jpg">
+							<img src="assets/fabrizio-conti-rbgXGpA53oM-unsplash.jpg">
+						</section>
+						<section class="article">
+							<div>
+								<h3>What is achromatopsia?</h3>
+								<p>Achromatopsia is an inherited vision disorder that limits your ability to see color. It's present at birth and usually nonprogressive, meaning the symptoms don't worsen over time.</p>
+							</div>
+							<div>
+								<hr>
+								<h3>Two Types of achromatopsia</h3>
+								<h4>Complete</h4>
+								<p>Vision is limited to black, white and shades of grey.</p>
+								<h4>Incomplete</h4>
+								<p>Color vision is limited, with dull hues that can be difficult to distinguish.</p>	
+							</div>
+							<div>
+								<h3>How is achromatopsia different from color blindness?</h3>
+								<p>In color blindness, people have normal vision and see some color. In achromatopsia, vision is reduced, there is a lack of color vision, and other vision issues arise such as rapid eye movements. Symptoms often make it difficult to go about daily life.</p>
+							</div>
+							<div>
+								<h3>What causes achromatopsia?</h3>
+								<p>Achromatopsia is a genetic disorder that results from mutations in one of six genes. The condition causes issues in the back of the eye (retina). This area contains light-sensitive cells (photoreceptors) that send information to the brain. Two types of cells support this process:</p>
+								<ul>
+									<li>
+										Cones make it possible to perceive colors and see in bright light.
+									</li>
+									<li>
+										Rods help you see in low light, such as in a dimly lit room.
+									</li>
+								</ul>
+							</div>
+							<div>
+								<h3>What are the symptoms of achromatopsia?</h3>
+								<p>With achromatopsia, you may experience:</p>
+								<ul>
+									<li>Blind spots (scotomas).</li>
+									<li>Blurred vision (astigmatism).</li>
+									<li>Color blindness.</li>
+									<li>Extreme farsightedness.</li>
+									<li>Eye discomfort in bright light (photophobia).</li>
+								</ul>
+							</div>
+						</section>
 					</section>
 					<section id="glaucomaArticle">
 						<h2>Glaucoma</h2>
-						<p>xxx</p>
+						<section class = "title">
+							<div class="author">
+								<p>By Mayo Clinic Staff</p>
+							</div>
+							<div class="link">
+								<button id="glaucomabtn"><a href="https://www.mayoclinic.org/diseases-conditions/glaucoma/symptoms-causes/syc-20372839">Link to article</a></button>
+							</div>
+						</section>
+						<section class="image-container">
+							<img src="assets/fabrizio-conti-rbgXGpA53oM-unsplash.jpg">
+							<img src="assets/fabrizio-conti-rbgXGpA53oM-unsplash.jpg">
+						</section>
+						<section class="article">
+							<div>
+								<h3>What is glaucoma?</h3>
+								<p>Glaucoma is a group of eye conditions that damage the optic nerve. The optic nerve sends visual information from your eye to your brain and is vital for good vision. Damage to the optic nerve is often related to high pressure in your eye. But glaucoma can happen even with normal eye pressure.</p>
+								<p>Glaucoma can occur at any age but is more common in older adults. It is one of the leading causes of blindness for people over the age of 60.</p>
+								<p>Many forms of glaucoma have no warning signs. The effect is so gradual that you may not notice a change in vision until the condition is in its later stages.</p>
+								<p>It's important to have regular eye exams that include measurements of your eye pressure. If glaucoma is recognized early, vision loss can be slowed or prevented. If you have glaucoma, you'll need treatment or monitoring for the rest of your life.</p>
+							</div>
+							<div>
+								<hr>
+								<h3>Two Types of achromatopsia</h3>
+								<h4>Complete</h4>
+								<p>Vision is limited to black, white and shades of grey.</p>
+								<h4>Incomplete</h4>
+								<p>Color vision is limited, with dull hues that can be difficult to distinguish.</p>	
+							</div>
+							<div>
+								<h3>Symptoms</h3>
+								<p>The symptoms of glaucoma depend on the type and stage of your condition.</p>
+								<div>
+									<h4>Open-angle glaucoma</h4>
+									<ul>
+										<li>No symptoms in early stages</li>
+										<li>Gradually, patchy blind spots in your side vision. Side vision also is known as peripheral vision</li>
+										<li>In later stages, difficulty seeing things in your central vision</li>
+									</ul>
+								</div>
+								<div>
+									<h4>Acute angle-closure glaucoma</h4>
+									<ul>
+										<li>Severe headache</li>
+										<li>Severe eye pain</li>
+										<li>Nausea or vomiting</li>
+										<li>Blurred vision</li>
+										<li>Halos or colored rings around lights</li>
+										<li>Eye redness</li>
+									</ul>
+								</div>
+								<div>
+									<h4>Normal-tension glaucoma</h4>
+									<ul>
+										<li>No symptoms in early stages</li>
+										<li>Severe eye pain</li>
+										<li>Gradually, blurred vision</li>
+										<li>In later stages, loss of side vision</li>
+									</ul>
+								</div>
+								<div>
+								<h4>Glaucoma in children</h4>
+									<ul>
+										<li> dull or cloudy eye (infants)</li>
+										<li>Increased blinking (infants)</li>
+										<li>Tears without crying (infants)</li>
+										<li>Blurred vision</li>
+										<li>Nearsightedness that gets worse</li>
+										<li>Headache</li>
+									</ul>
+								</div>
+								<div>
+									<h4>Pigmentary glaucoma</h4>
+									<ul>
+										<li>Halos around lights</li>
+										<li>Blurred vision with exercise</li>
+										<li>Gradual loss of side vision</li>
+									</ul>
+								</div>
+							</div>
+							<div>
+								<h3>What causes glaucoma?</h3>
+								<p>Glaucoma develops when the optic nerve becomes damaged. As this nerve gradually deteriorates, blind spots develop in your vision. For reasons that doctors don't fully understand, this nerve damage is usually related to increased pressure in the eye.</p>
+								<p>Elevated eye pressure happens as the result of a buildup of fluid that flows throughout the inside of the eye. This fluid also is known as the aqueous humor. It usually drains through a tissue located at the angle where the iris and cornea meet. This tissue also is called the trabecular meshwork. The cornea is important to vision because it lets light into the eye. When the eye makes too much fluid or the drainage system doesn't work properly, eye pressure may increase.</p>
+							</div>
+							<div>
+								<h3>Risk factors</h3>
+								<p>Glaucoma can damage vision before you notice any symptoms. So be aware of these risk factors:</p>
+								<ul>
+									<li>High internal eye pressure, also known as intraocular pressure</li>
+									<li>Age over 55</li>
+									<li>Certain medical conditions, such as diabetes, migraines, high blood pressure and sickle cell anemia</li>
+									<li>Family history of glaucoma</li>
+									<li>Corneas that are thin in the center</li>
+									<li>Extreme nearsightedness or farsightedness</li>
+									<li>Eye injury or certain types of eye surgery</li>
+									<li>Taking corticosteroid medicines, especially eye drops, for a long time</li>
+									<p>Some people have narrow drainage angles, putting them at increased risk of angle-closure glaucoma.</p>
+								</ul>
+							</div>
+						</section>
 					</section>
 					<section id="diabeticArticle">
 						<h2>Diabetic Retinopathy</h2>
-						<p>xxx</p>
+						<section class = "title">
+							<div class="author">
+								<p>By National Eye Institute</p>
+							</div>
+							<div class="link">
+								<button id="diabeticbtn"><a href="https://www.nei.nih.gov/learn-about-eye-health/eye-conditions-and-diseases/diabetic-retinopathy">Link to article</a></button>
+							</div>
+						</section>
+						<section class="image-container">
+							<img src="assets/fabrizio-conti-rbgXGpA53oM-unsplash.jpg">
+							<img src="assets/fabrizio-conti-rbgXGpA53oM-unsplash.jpg">
+						</section>
+						<section class="article">
+							<div>
+								<h3>What is diabetic retinopathy</h3>
+								<p>Diabetic retinopathy is an eye condition that can cause vision loss and blindness in people who have diabetes. It affects blood vessels in the retina (the light-sensitive layer of tissue in the back of your eye).</p>
+								<p>If you have diabetes, it's important to get a comprehensive dilated eye exam at least once a year. Diabetic retinopathy may not have any symptoms at first — but finding it early can help you take steps to protect your vision. </p>
+								Managing your diabetes — by staying physically active, eating healthy, and taking your medicine — can also help you prevent or delay vision loss.  
+							</div>
+							<div>
+								<hr>
+								<h3>What other problems can diabetic retinopathy cause?</h3>
+								<p>Diabetic retinopathy can lead to other serious eye conditions:</p>
+								<h4>Diabetic macular edema (DME). </h4>
+								<p>TOver time, about 1 in 15 people with diabetes will develop DME. DME happens when blood vessels in the retina leak fluid into the macula (a part of the retina needed for sharp, central vision). This causes blurry vision.</p>
+								<h4>Neovascular glaucoma</h4>
+								<p>Diabetic retinopathy can cause abnormal blood vessels to grow out of the retina and block fluid from draining out of the eye. This causes a type of glaucoma (a group of eye diseases that can cause vision loss and blindness).</p>	
+								<h4>Retinal detachment.</h4>
+								<p>Diabetic retinopathy can cause scars to form in the back of your eye. When the scars pull your retina away from the back of your eye, it's called tractional retinal detachment.</p>
+							</div>
+							<div>
+								<h3>Causes </h3>
+								<p>Diabetic retinopathy is caused by high blood sugar due to diabetes. Over time, having too much sugar in your blood can damage your retina — the part of your eye that detects light and sends signals to your brain through a nerve in the back of your eye (optic nerve).  </p>
+								<p>Diabetes damages blood vessels all over the body. The damage to your eyes starts when the sugar in your blood causes changes to the tiny blood vessels that go to your retina. These changes make it harder for the blood to flow, leading to blocked blood vessels that leak fluid or bleed. To make up for these blocked blood vessels, your eyes then grow new blood vessels that don't work well. These new blood vessels can leak or bleed easily.</p>
+							</div>
+						</section>
 					</section>
 				</main>
 			</div>
-		</div>
 	</body>
 </html>
 
