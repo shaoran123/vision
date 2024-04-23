@@ -90,8 +90,8 @@ html{
 .image-section img:nth-child(7) { left: 65%; top: 70%; }
 .image-section img:nth-child(8) { left: 65%; top: 70%; } 
 
-.image-section img:nth-child(9) { left: 70%; top: -10%; }
-.image-section img:nth-child(10) { left:70%; top: -10%; }
+.image-section img:nth-child(9) { left: 70%; top: -5%; }
+.image-section img:nth-child(10) { left:70%; top: -5%; }
 
 
 /*Button*/
