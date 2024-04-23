@@ -411,7 +411,8 @@ article{
     top: 50%;
     left:50%;
     transform: translate(-50%,-50%);
-    background-image: url(/assets/Frame\ 1.png);
+    /* background-image: url(/assets/Frame\ 1.png); */
+    background-color:rgb(239, 239, 239);
     object-fit:contain;
     /* background-position: center; */
     background-repeat: no-repeat;
@@ -425,12 +426,13 @@ article{
     overflow-y: auto;
     overflow-x: hidden; 
     display:none;
-    filter:drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.2));
+    filter:drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.4));
 }
 
 article hr{
     margin-left:var(--font-size);
     margin-right:var(--font-size);
+    border: dashed 1px rgb(173, 173, 173);
 }
 
 #closearticle{
@@ -465,7 +467,7 @@ article hr{
     left:0;
     right:0;
     bottom:0;
-    background-color:rgba(255, 255, 255, 0.5);
+    /* background-color:rgba(213, 196, 238, 0.8); */
     pointer-events: none;
     display:none;
     z-index: 8;

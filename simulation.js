@@ -48,7 +48,7 @@ glaucoma.onclick = () => {
 		glaucomaArticle.style.display = 'block';
         animationActive = true;
 		glaucoma.style.backgroundColor = '#EDE2FF';
-		stopBtn.src = "/assets/Intersect-outline.png";
+		stopBtn.src = "https://shaoran123.github.io/vision/assets/Intersect-outline.png";
 		stopBtn.style.transform = "scale(1.4)";
 		stopp.style.opacity = 100;
 
@@ -74,7 +74,7 @@ AMD.onclick = () => {
 		activeArticle = AMDArticle;
 		AMDArticle.style.display = 'block';
 		AMD.style.backgroundColor = '#EDE2FF';
-		stopBtn.src = "/assets/Intersect-outline.png";
+		stopBtn.src = "https://shaoran123.github.io/vision/assets/Intersect-outline.png";
 		stopBtn.style.transform = "scale(1.4)";
 		stopp.style.opacity = 100;
 
@@ -104,7 +104,7 @@ cataracts.onclick = () => {
 		cataracts.style.backgroundColor = '#EDE2FF';
 		// cataracts.style.backgroundColor = "#FFFCB7";
 		stopBtn.style.transform = "scale(1.4)";
-		stopBtn.src = "/assets/Intersect-outline.png";
+		stopBtn.src = "https://shaoran123.github.io/vision/assets/Intersect-outline.png";
 		stopp.style.opacity = 100;
 
 		document.addEventListener('mousemove', e =>{
@@ -150,7 +150,7 @@ achromatopsia.onclick = () => {
 		achromatopsiaArticle.style.display = 'block';
 		achromatopsia.style.backgroundColor = '#EDE2FF';	
 		stopBtn.style.transform = "scale(1.4)";
-		stopBtn.src = "/assets/Intersect-outline.png";
+		stopBtn.src = "https://shaoran123.github.io/vision/assets/Intersect-outline.png";
 		stopp.style.opacity = 100;
 		// achromatopsia.style.backgroundColor = "#FFFCB7";
 
@@ -180,7 +180,7 @@ diabetic.onclick = () => {
 		diabeticArticle.style.display = 'block';
 		diabetic.style.backgroundColor = '#EDE2FF'
 		stopBtn.style.transform = "scale(1.4)";
-		stopBtn.src = "/assets/Intersect-outline.png";
+		stopBtn.src = "https://shaoran123.github.io/vision/assets/Intersect-outline.png";
 		stopp.style.opacity = 100;
 
 		document.addEventListener('mousemove', e =>{
@@ -258,6 +258,7 @@ document.querySelectorAll('button').forEach((button) => {
 });
 
 
+
 //Click to original article
 
 AMDbtn.onclick  = () => {
@@ -267,16 +268,25 @@ AMDbtn.onclick  = () => {
 
 //Click to open article about prevent
 
+function shuffleColors(){
+	const randomIndex = Math.floor(Math.random() * colors.length);
+	document.getElementById('overlay').style.backgroundColor = colors[randomIndex];
+}
+
 preventBtn.onclick = () =>{
 	preventarticle.style.display = 'block';
-	overlay.style.display = 'block'
+	overlay.style.display = 'block';
+	overlay.style.opacity = '0.7'
+	shuffleColors();
 	jsConfetti.addConfetti({
 		emojis:['🥕', '🕶️', '🥼', '👓', '🚭', '🏞️', '🥬', '🐟','👁️'],
 		emojiSize: 100,
 		confettiNumber: 100,
+		// origin: { x: 0.5, y: -1 }
 	})
 
 }
+
 
 
 closeBtn.onclick = () =>{
