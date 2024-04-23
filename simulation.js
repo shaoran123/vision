@@ -1,4 +1,5 @@
 console.log("hi");
+//Credit to Sabrina for helping with js 🫶//
 
 //state
 let animationActive = false;
@@ -14,7 +15,7 @@ const AMDLight = document.getElementById('AMDLight');
 const cataractsLight = document.getElementById('cataractsLight');
 const achromatopsiaLight = document.getElementById('achromatopsiaLight');
 const diabeticLight = document.getElementById('diabeticLight');
-const emojis = ['🥕', '🕶️', '🥼', '👓', '🚭', '🏞️', '🥬', '🐟'];
+const emojis = ['🥕', '🕶️', '🥼', '👓', '🚭', '🏞️', '🥬', '🐟','👁️'];
 const colors = ['#EDE2FF', '#F8E9B5', '#FFDECC', '#BBECC3', '#A5F3F3'];
 const button = document.getElementsByClassName('button');
 const AMDArticle = document.getElementById('AMDArticle');
@@ -24,6 +25,13 @@ const glaucomaArticle = document.getElementById('glaucomaArticle');
 const diabeticArticle = document.getElementById('diabeticArticle');
 const mainElement = document.querySelector('main');
 const AMDbtn = document.getElementById('AMDbtn');
+const stopp = document.getElementById('stopp');
+const preventBtn = document.getElementById('prevent');
+const closeBtn = document.getElementById('closearticle');
+const overlay = document.getElementById('overlay');
+const canvas = document.querySelector("canvas-target");
+const prevent = document.querySelector("confetti-button")
+const jsConfetti = new JSConfetti({canvas});
 
 
 //mouse position
@@ -40,7 +48,9 @@ glaucoma.onclick = () => {
 		glaucomaArticle.style.display = 'block';
         animationActive = true;
 		glaucoma.style.backgroundColor = '#EDE2FF';
-		stopBtn.style.transform = "scale(1.2)";
+		stopBtn.src = "/assets/Intersect-outline.png";
+		stopBtn.style.transform = "scale(1.4)";
+		stopp.style.opacity = 100;
 
 		document.addEventListener('mousemove', e => {
 			glaucomaLight.style.setProperty('--x', e.clientX + 'px');
@@ -64,7 +74,9 @@ AMD.onclick = () => {
 		activeArticle = AMDArticle;
 		AMDArticle.style.display = 'block';
 		AMD.style.backgroundColor = '#EDE2FF';
-		stopBtn.style.transform = "scale(1.2)";
+		stopBtn.src = "/assets/Intersect-outline.png";
+		stopBtn.style.transform = "scale(1.4)";
+		stopp.style.opacity = 100;
 
 		document.addEventListener('mousemove', e =>{
 			console.log('Moving AMDLight');
@@ -91,7 +103,9 @@ cataracts.onclick = () => {
 		cataractsArticle.style.display = 'block';
 		cataracts.style.backgroundColor = '#EDE2FF';
 		// cataracts.style.backgroundColor = "#FFFCB7";
-		stopBtn.style.transform = "scale(1.2)";
+		stopBtn.style.transform = "scale(1.4)";
+		stopBtn.src = "/assets/Intersect-outline.png";
+		stopp.style.opacity = 100;
 
 		document.addEventListener('mousemove', e =>{
 			cataractsLight.style.setProperty('--x', e.clientX + 'px');
@@ -135,7 +149,9 @@ achromatopsia.onclick = () => {
 		activeArticle = achromatopsiaArticle;
 		achromatopsiaArticle.style.display = 'block';
 		achromatopsia.style.backgroundColor = '#EDE2FF';	
-		stopBtn.style.transform = "scale(1.2)";
+		stopBtn.style.transform = "scale(1.4)";
+		stopBtn.src = "/assets/Intersect-outline.png";
+		stopp.style.opacity = 100;
 		// achromatopsia.style.backgroundColor = "#FFFCB7";
 
 		document.addEventListener('mousemove', e =>{
@@ -150,27 +166,6 @@ achromatopsia.onclick = () => {
     }
 }
 
-// document.getElementById('achromatopsia').addEventListener('click', () => {
-//     if (activeLight != achromatopsiaLight) {
-//         closeAllLight();
-// 		closeAricle();
-// 		mainElement.style.opacity=100; 
-//         achromatopsiaLight.style.display = 'block';
-//         activeLight = achromatopsiaLight;
-//         animationActive = true;
-// 		activeArticle = achromatopsiaArticle;
-// 		achromatopsiaArticle.style.display = 'block';
-// 		achromatopsia.style.backgroundColor = '#EDE2FF'
-
-//         // Assuming rgblind exposes a function to apply colorblind simulation
-//         // Replace 'document.body' with the specific element you want to apply the simulation on
-//         // rgblind.simulate(document.body, 'achromatopsia');
-//     } else {
-//         closeAllLight();
-// 		closeAricle();
-//     }
-// });
-
 // diabetic click 
 diabetic.onclick = () => {
 
@@ -184,7 +179,9 @@ diabetic.onclick = () => {
 		activeArticle = diabeticArticle;
 		diabeticArticle.style.display = 'block';
 		diabetic.style.backgroundColor = '#EDE2FF'
-		stopBtn.style.transform = "scale(1.2)";
+		stopBtn.style.transform = "scale(1.4)";
+		stopBtn.src = "/assets/Intersect-outline.png";
+		stopp.style.opacity = 100;
 
 		document.addEventListener('mousemove', e =>{
 			diabeticLight.style.left = e.clientX-(diabeticLight.clientWidth/2.5) + 'px';
@@ -197,7 +194,7 @@ diabetic.onclick = () => {
     }
 }
 
-// Close All 
+// Close All light
 function closeAllLight() {
 	AMDLight.style.display = 'none';
 	glaucomaLight.style.display = 'none';
@@ -207,7 +204,11 @@ function closeAllLight() {
 	activeLight = null;
 	animationActive = false;
 	stopBtn.style.transform = "scale(1.0)";
+	stopp.style.opacity = 0;
+	stopBtn.src = "/assets/Intersect.png";
 }
+
+// Close articles 
 
 function closeAricle() {
 	mainElement.style.opacity=0;
@@ -222,6 +223,7 @@ function closeAricle() {
 	achromatopsiaArticle.style.display ='none';
 	diabeticArticle.style.display ='none';
 	stopBtn.style.transform = "scale(1.0)";
+	stopBtn.src = "/assets/Intersect.png";
 }
 
 // Stop click 
@@ -262,6 +264,33 @@ AMDbtn.onclick  = () => {
 	AMDbtn.style.backgroundColor = '#EDE2FF'
 	// window.location.href = "https://www.aao.org/eye-health/diseases/amd-macular-degeneration";
 }
+
+//Click to open article about prevent
+
+preventBtn.onclick = () =>{
+	preventarticle.style.display = 'block';
+	overlay.style.display = 'block'
+	jsConfetti.addConfetti({
+		emojis:['🥕', '🕶️', '🥼', '👓', '🚭', '🏞️', '🥬', '🐟','👁️'],
+		emojiSize: 100,
+		confettiNumber: 100,
+	})
+
+}
+
+
+closeBtn.onclick = () =>{
+	preventarticle.style.display = 'none';
+	overlay.style.display = 'none';
+}
+
+
+//Credit to Sabrina for helping with debug 🫶//
+
+
+
+
+
 
 // glaucoma.onclick = () => {
 // 	if (animationActive == false) {
