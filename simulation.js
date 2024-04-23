@@ -205,7 +205,7 @@ function closeAllLight() {
 	animationActive = false;
 	stopBtn.style.transform = "scale(1.0)";
 	stopp.style.opacity = 0;
-	stopBtn.src = "/assets/Intersect.png";
+	stopBtn.src = "https://shaoran123.github.io/vision/assets/Intersect.png";
 }
 
 // Close articles 
@@ -223,7 +223,7 @@ function closeAricle() {
 	achromatopsiaArticle.style.display ='none';
 	diabeticArticle.style.display ='none';
 	stopBtn.style.transform = "scale(1.0)";
-	stopBtn.src = "/assets/Intersect.png";
+	stopBtn.src = "https://shaoran123.github.io/vision/assets/Intersect.png";
 }
 
 // Stop click 
