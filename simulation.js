@@ -278,12 +278,12 @@ preventBtn.onclick = () =>{
 	overlay.style.display = 'block';
 	overlay.style.opacity = '0.7'
 	shuffleColors();
-	jsConfetti.addConfetti({
-		emojis:['🥕', '🕶️', '🥼', '👓', '🚭', '🏞️', '🥬', '🐟','👁️'],
-		emojiSize: 100,
-		confettiNumber: 100,
-		// origin: { x: 0.5, y: -1 }
-	})
+	// jsConfetti.addConfetti({
+	// 	emojis:['🥕', '🕶️', '🥼', '👓', '🚭', '🏞️', '🥬', '🐟','👁️'],
+	// 	emojiSize: 100,
+	// 	confettiNumber: 100,
+	// 	// origin: { x: 0.5, y: -1 }
+	// })
 
 }
 
